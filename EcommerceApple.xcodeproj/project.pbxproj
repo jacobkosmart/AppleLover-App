@@ -17,6 +17,14 @@
 		819BB4FE27994E92005F02D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819BB4D427994E90005F02D3 /* ContentView.swift */; };
 		819BB4FF27994E92005F02D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819BB4D527994E92005F02D3 /* Assets.xcassets */; };
 		819BB50027994E92005F02D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819BB4D527994E92005F02D3 /* Assets.xcassets */; };
+		819BB51327994ECB005F02D3 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819BB51027994ECB005F02D3 /* Raleway-SemiBold.ttf */; };
+		819BB51427994ECB005F02D3 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819BB51027994ECB005F02D3 /* Raleway-SemiBold.ttf */; };
+		819BB51527994ECB005F02D3 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819BB51127994ECB005F02D3 /* Raleway-Regular.ttf */; };
+		819BB51627994ECB005F02D3 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819BB51127994ECB005F02D3 /* Raleway-Regular.ttf */; };
+		819BB51727994ECB005F02D3 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819BB51227994ECB005F02D3 /* Raleway-Bold.ttf */; };
+		819BB51827994ECB005F02D3 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819BB51227994ECB005F02D3 /* Raleway-Bold.ttf */; };
+		819BB51C27994FB4005F02D3 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819BB51B27994FB4005F02D3 /* OnBoardingView.swift */; };
+		819BB51D27994FB4005F02D3 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819BB51B27994FB4005F02D3 /* OnBoardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,11 @@
 		819BB4F327994E92005F02D3 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		819BB4F727994E92005F02D3 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		819BB4F927994E92005F02D3 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		819BB51027994ECB005F02D3 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		819BB51127994ECB005F02D3 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		819BB51227994ECB005F02D3 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		819BB51927994F28005F02D3 /* EcommerceApple--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EcommerceApple--iOS--Info.plist"; sourceTree = "<group>"; };
+		819BB51B27994FB4005F02D3 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +99,7 @@
 		819BB4CD27994E90005F02D3 = {
 			isa = PBXGroup;
 			children = (
+				819BB51927994F28005F02D3 /* EcommerceApple--iOS--Info.plist */,
 				819BB4D227994E90005F02D3 /* Shared */,
 				819BB4E127994E92005F02D3 /* macOS */,
 				819BB4EA27994E92005F02D3 /* Tests iOS */,
@@ -97,6 +111,8 @@
 		819BB4D227994E90005F02D3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				819BB51A27994F8D005F02D3 /* View */,
+				819BB50F27994ECB005F02D3 /* Fonts */,
 				819BB4D327994E90005F02D3 /* EcommerceAppleApp.swift */,
 				819BB4D427994E90005F02D3 /* ContentView.swift */,
 				819BB4D527994E92005F02D3 /* Assets.xcassets */,
@@ -139,6 +155,24 @@
 				819BB4F927994E92005F02D3 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		819BB50F27994ECB005F02D3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				819BB51027994ECB005F02D3 /* Raleway-SemiBold.ttf */,
+				819BB51127994ECB005F02D3 /* Raleway-Regular.ttf */,
+				819BB51227994ECB005F02D3 /* Raleway-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		819BB51A27994F8D005F02D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				819BB51B27994FB4005F02D3 /* OnBoardingView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +301,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				819BB4FF27994E92005F02D3 /* Assets.xcassets in Resources */,
+				819BB51527994ECB005F02D3 /* Raleway-Regular.ttf in Resources */,
+				819BB51327994ECB005F02D3 /* Raleway-SemiBold.ttf in Resources */,
+				819BB51727994ECB005F02D3 /* Raleway-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +312,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				819BB50027994E92005F02D3 /* Assets.xcassets in Resources */,
+				819BB51627994ECB005F02D3 /* Raleway-Regular.ttf in Resources */,
+				819BB51427994ECB005F02D3 /* Raleway-SemiBold.ttf in Resources */,
+				819BB51827994ECB005F02D3 /* Raleway-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819BB51C27994FB4005F02D3 /* OnBoardingView.swift in Sources */,
 				819BB4FD27994E92005F02D3 /* ContentView.swift in Sources */,
 				819BB4FB27994E92005F02D3 /* EcommerceAppleApp.swift in Sources */,
 			);
@@ -308,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819BB51D27994FB4005F02D3 /* OnBoardingView.swift in Sources */,
 				819BB4FE27994E92005F02D3 /* ContentView.swift in Sources */,
 				819BB4FC27994E92005F02D3 /* EcommerceAppleApp.swift in Sources */,
 			);
@@ -468,6 +510,7 @@
 				DEVELOPMENT_TEAM = M63L6X73D4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EcommerceApple--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -498,6 +541,7 @@
 				DEVELOPMENT_TEAM = M63L6X73D4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EcommerceApple--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
