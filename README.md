@@ -43,7 +43,7 @@
 
 #### 👉 [1.Building OnBoarding Screen]()
 
-#### 👉 []()
+#### 👉 [2. Building Tab Bar]()
 
 #### 👉 []()
 
@@ -81,7 +81,9 @@
 // MARK: Extensions
 -->
 
-<!-- <img height="350" alt="스크린샷" src=""> -->
+<!-- <p align="center">
+  <img height="350"  alt="스크린샷" src="">
+</p> -->
 
 <!-- README 한 줄에 여러 screenshoot 놓기 예제 -->
 <!-- <p>

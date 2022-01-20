@@ -13,6 +13,7 @@ struct OnBoardingView: View {
 	
 	// To use the custom font on all pages..
 	let customFontBold = "Raleway-bold"
+	let customFontRegular = "Raleway-regular"
 	
 	// MARK: -  BODY
 	var body: some View {
