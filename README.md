@@ -35,17 +35,13 @@
 
 ```
 
-### 🔷
-
-#### 🔶
-
 ### 🔷 Check core codes in details
 
 #### 👉 [1.Building OnBoarding Screen]()
 
-#### 👉 [2. Building Tab Bar]()
+#### 👉 [2.Building Tab Bar]()
 
-#### 👉 []()
+#### 👉 [3.Building HomeView ]()
 
 #### 👉 []()
 

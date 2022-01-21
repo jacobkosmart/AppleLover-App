@@ -23,18 +23,26 @@ class LoginPageModel: ObservableObject {
 	let customFontBold = "Raleway-bold"
 	let customFontRegular = "Raleway-regular"
 	
+	// Log Status..
+	@AppStorage("logStatus") var logStatus: Bool = false
+	
 	// MARK: -  FUNCTION
 	// Login call..
 	func Login() {
-		// Do Action Here..
+		withAnimation {
+			logStatus = true
+		}
 	}
 	
 	func Register() {
-		// Do Action Here..
+		withAnimation {
+			logStatus = true
+		}
 	}
 	
 	func ForgetPassword() {
 		// Do Action Here..
 	}
 }
+
 

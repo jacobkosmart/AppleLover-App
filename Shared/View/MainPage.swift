@@ -17,6 +17,7 @@ struct MainPage: View {
 		UITabBar.appearance().isHidden = true
 	}
 	
+	
 	// MARK: -  BODY
 	var body: some View {
 		
@@ -24,7 +25,7 @@ struct MainPage: View {
 			
 			// Tab View..
 			TabView(selection: $currentTab) {
-				Text("Home").tag(Tab.Home)
+				Home().tag(Tab.Home)
 				Text("Liked").tag(Tab.Liked)
 				Text("Cart").tag(Tab.Cart)
 				Text("Profile").tag(Tab.Profile)
@@ -44,7 +45,7 @@ struct MainPage: View {
 							.frame(width: 22, height: 22)
 						// Applying litter shadow at bg..
 							.background(
-								Color("Purple")
+								Color("Color1")
 									.opacity(0.1)
 									.cornerRadius(5)
 								// Blur
@@ -54,13 +55,14 @@ struct MainPage: View {
 									.opacity(currentTab == tab ? 1 : 0)
 							)
 							.frame(maxWidth: .infinity)
-							.foregroundColor(currentTab == tab ? Color("Purple") : Color.black.opacity(0.3))
+							.foregroundColor(currentTab == tab ? Color("Color1") : Color.black.opacity(0.3))
 					}
 				}
 			} //: HSTACK
 			.padding([.horizontal, .top])
 			.padding(.bottom, 10)
 		} //: VSTACK
+		.background(Color("HomeBG").ignoresSafeArea())
 	}
 }
 
@@ -84,3 +86,5 @@ enum Tab: String, CaseIterable {
 	case Cart = "Cart"
 	case Profile = "Profile"
 }
+
+

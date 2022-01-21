@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+// Custom Font
+let customFontBold = "Raleway-bold"
+let customFontRegular = "Raleway-regular"
+
 struct OnBoardingView: View {
 	
 	// MARK: -  PROPERTY
+	@StateObject var loginData: LoginPageModel = LoginPageModel()
 	
 	// To use the custom font on all pages..
 	let customFontBold = "Raleway-bold"
@@ -19,8 +24,8 @@ struct OnBoardingView: View {
 	var body: some View {
 		
 		VStack(alignment: .leading) {
-			Text("Find your\nGadget")
-				.font(.custom(customFontBold, size: 55))
+			Text("Find Bland New\nApple Devices")
+				.font(.custom(customFontBold, size: 45))
 			// Since we added all three fonts in Info.plist
 			// It can called all of those fonts with any names..
 				.foregroundColor(.white)
@@ -30,7 +35,7 @@ struct OnBoardingView: View {
 				.aspectRatio(contentMode: .fit)
 			
 			Button {
-				
+				loginData.Login()
 			} label: {
 				Text("Get Started")
 					.font(.custom(customFontBold, size: 18))
@@ -39,7 +44,7 @@ struct OnBoardingView: View {
 					.background(.white)
 					.cornerRadius(20)
 					.shadow(color: .black.opacity(0.1), radius: 5, x: 5, y: 5)
-					.foregroundColor(Color("Purple"))
+					.foregroundColor(Color("Color1"))
 			}
 			.padding(.horizontal, 30)
 			// Adding some adjustments only for larger displays..
@@ -52,7 +57,7 @@ struct OnBoardingView: View {
 		.padding(.top, getRect().height < 750 ? 0 : 20)
 		.frame(maxWidth: .infinity, maxHeight: .infinity)
 		.background(
-			Color("Purple")
+			Color("Color1")
 		) 
 	}
 }
@@ -68,11 +73,3 @@ struct OnBoardingView_Previews: PreviewProvider {
 }
 
 
-// MARK: -  EXTENTION
-extension View {
-	// Extending View to get Screen Bounds..
-	// 기기의 resolution 사이즈 가져옴
-	func getRect() -> CGRect {
-		return UIScreen.main.bounds
-	}
-}
