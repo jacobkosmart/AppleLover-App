@@ -36,6 +36,11 @@ class HomeViewModel: ObservableObject {
 	// More products on the type..
 	@Published var showMoreProductsOnType: Bool = false
 	
+	// Search Data..
+	@Published var searchText: String = ""
+	@Published var searchActivated: Bool = false
+	@Published var searchedProducts: [Product]?
+	
 	init() {
 		filterProductByType()
 	}
@@ -64,4 +69,22 @@ class HomeViewModel: ObservableObject {
 		}
 	}
 	
+	func filterProductBySearch() {
+		// Filtering product By Product Type..
+		DispatchQueue.global(qos: .userInteractive).async {
+			
+			let results = self.products
+			// Since it will require more momory so were using lazy to perform more..
+				.lazy
+				.filter { product in
+					return product.title.lowercased().contains(self.searchText.lowercased())
+				}
+			
+			DispatchQueue.main.async {
+				self.searchedProducts = results.compactMap({ product in
+					return product
+				})
+			}
+		}
+	}
 }

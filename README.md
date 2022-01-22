@@ -43,9 +43,9 @@
 
 #### 👉 [3.Building HomeView ]()
 
-#### 👉 []()
+#### 👉 [4.Building Animated Search Bar]()
 
-#### 👉 []()
+#### 👉 [5.Building Staggered Grid Search Results]()
 
 #### 👉 []()
 

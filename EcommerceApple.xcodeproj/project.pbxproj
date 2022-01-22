@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8134956A279B8436008748E7 /* StaggeredGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81349569279B8436008748E7 /* StaggeredGrid.swift */; };
 		81792156279A48D9006F7F6C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81792155279A48D9006F7F6C /* HomeViewModel.swift */; };
 		81792158279A7B6B006F7F6C /* MoreProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81792157279A7B6B006F7F6C /* MoreProductsView.swift */; };
 		819BB4EC27994E92005F02D3 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819BB4EB27994E92005F02D3 /* Tests_iOS.swift */; };
@@ -35,6 +36,7 @@
 		81A60FA3279A3F29000BB347 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A60FA2279A3F29000BB347 /* CustomModifiers.swift */; };
 		81A60FA5279A41A5000BB347 /* CustomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A60FA4279A41A4000BB347 /* CustomViewModel.swift */; };
 		81A60FA8279A4447000BB347 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A60FA7279A4447000BB347 /* Product.swift */; };
+		81F17006279AA4AF00BAD3DB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F17005279AA4AF00BAD3DB /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81349569279B8436008748E7 /* StaggeredGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGrid.swift; sourceTree = "<group>"; };
 		81792155279A48D9006F7F6C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		81792157279A7B6B006F7F6C /* MoreProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProductsView.swift; sourceTree = "<group>"; };
 		819BB4D327994E90005F02D3 /* EcommerceAppleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceAppleApp.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		81A60FA2279A3F29000BB347 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		81A60FA4279A41A4000BB347 /* CustomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModel.swift; sourceTree = "<group>"; };
 		81A60FA7279A4447000BB347 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		81F17005279AA4AF00BAD3DB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 				81A5C10F27996710002155D9 /* LoginPage.swift */,
 				81A5C11427998159002155D9 /* MainPage.swift */,
 				81792157279A7B6B006F7F6C /* MoreProductsView.swift */,
+				81349569279B8436008748E7 /* StaggeredGrid.swift */,
+				81F17005279AA4AF00BAD3DB /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81792158279A7B6B006F7F6C /* MoreProductsView.swift in Sources */,
+				8134956A279B8436008748E7 /* StaggeredGrid.swift in Sources */,
 				819BB51C27994FB4005F02D3 /* OnBoardingView.swift in Sources */,
 				81A5C11327996907002155D9 /* CustomCorners.swift in Sources */,
 				819BB4FD27994E92005F02D3 /* ContentView.swift in Sources */,
@@ -411,6 +418,7 @@
 				81A60FA5279A41A5000BB347 /* CustomViewModel.swift in Sources */,
 				81792156279A48D9006F7F6C /* HomeViewModel.swift in Sources */,
 				81A5C11527998159002155D9 /* MainPage.swift in Sources */,
+				81F17006279AA4AF00BAD3DB /* SearchView.swift in Sources */,
 				81A60FA3279A3F29000BB347 /* CustomModifiers.swift in Sources */,
 				81A60FA1279A3442000BB347 /* Home.swift in Sources */,
 				819BB4FB27994E92005F02D3 /* EcommerceAppleApp.swift in Sources */,

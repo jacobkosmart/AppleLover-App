@@ -10,7 +10,6 @@ import SwiftUI
 struct Home: View {
 	// MARK: -  PROPERTY
 	@Namespace var animation
-	@StateObject var customData: CustomViewModel = CustomViewModel()
 	@StateObject var homeData: HomeViewModel = HomeViewModel()
 	
 	// MARK: -  BODY
@@ -19,24 +18,36 @@ struct Home: View {
 			VStack (spacing: 15) {
 				
 				// Search Bar..
-				SearchBarView()
+				// Add matched geometry effect..
+				ZStack {
+					if homeData.searchActivated {
+						SearchBarView()
+					} else {
+						SearchBarView()
+							.matchedGeometryEffect(id: "SEARCHBAR", in: animation)
+					}
+				} //: ZSTACK
+				.contentShape(Rectangle())
+				.onTapGesture {
+					withAnimation(.easeInOut) {
+						homeData.searchActivated = true
+					}
+				}
 				
 				// Main Title
 				Text("2022\n최신 애플 기기")
-					.font(.custom(customData.customFontBold, size: 30))
+					.font(.custom(customFontBold, size: 30))
 					.hLeading()
 					.padding(.top)
 					.padding(.horizontal, 25)
 				
-					// Products Tabs..
-				CategoryBarView(
-					homeData: homeData,
-					customData: customData,
-					animation: animation
-				)
-				
+				// Products Tabs..
+				CategoryBarView(animation: animation)
+					.environmentObject(homeData)
+
 				// Projects Pages
-				ProductPageView(homeData: homeData, customData: customData)
+				ProductPageView()
+					.environmentObject(homeData)
 				
 			} //: VSTACK
 			.padding(.vertical)
@@ -51,6 +62,15 @@ struct Home: View {
 		.sheet(isPresented: $homeData.showMoreProductsOnType) {
 			MoreProductsView()
 		}
+		// Display Search View..
+		.overlay(
+			ZStack {
+				if homeData.searchActivated {
+					SearchView(animation: animation)
+						.environmentObject(homeData)
+				}
+			} //: ZSTACK
+		)
 	}
 }
 
@@ -90,8 +110,9 @@ struct SearchBarView: View {
 
 // CategoryBarView
 struct CategoryBarView: View {
-	@StateObject var homeData: HomeViewModel
-	@StateObject var customData: CustomViewModel
+	// @StateObject var homeData: HomeViewModel
+	@EnvironmentObject var homeData: HomeViewModel
+	
 	var animation : Namespace.ID
 	
 	var body: some View {
@@ -106,7 +127,7 @@ struct CategoryBarView: View {
 						}
 					} label: {
 						Text(type.rawValue)
-							.font(.custom(customData.customFontBold, size: 15))
+							.font(.custom(customFontBold, size: 15))
 						// Changing Color based on Current product type..
 							.foregroundColor(homeData.productType == type ? Color("Color1") : Color.gray)
 							.padding(.bottom, 10)
@@ -143,8 +164,7 @@ struct CategoryBarView: View {
 
 struct ProductPageView: View {
 	
-	@StateObject var homeData: HomeViewModel = HomeViewModel()
-	@StateObject var customData: CustomViewModel = CustomViewModel()
+	@EnvironmentObject var homeData: HomeViewModel
 	
 	var body: some View {
 		ScrollView(.horizontal, showsIndicators: false) {
@@ -152,7 +172,7 @@ struct ProductPageView: View {
 				ForEach(homeData.filteredProducts) { product in
 					
 					// Product Card View..
-					ProductCardView(customData: customData, product: product)
+					ProductCardView(product: product)
 				}
 			} //: HSTACK
 			.padding(.horizontal, 25)
@@ -172,7 +192,7 @@ struct ProductPageView: View {
 			} icon: {
 				Text("더 많은 상품 보기")
 			}
-			.font(.custom(customData.customFontBold, size: 15))
+			.font(.custom(customFontBold, size: 15))
 			.foregroundColor(Color("Color1"))
 		}
 		.hTrailing()
@@ -185,7 +205,6 @@ struct ProductPageView: View {
 // ProdutCarView
 struct ProductCardView: View {
 	
-	@StateObject var customData: CustomViewModel
 	var product: Product
 	
 	var body: some View {
@@ -199,16 +218,16 @@ struct ProductCardView: View {
 				.padding(.bottom, -80)
 			
 			Text(product.title)
-				.font(.custom(customData.customFontBold, size: 18))
+				.font(.custom(customFontBold, size: 18))
 				.padding(.top)
 			
 			
 			Text(product.subtitle)
-				.font(.custom(customData.customFontRegular, size: 14))
+				.font(.custom(customFontRegular, size: 14))
 				.foregroundColor(.gray)
 			
 			Text(product.price)
-				.font(.custom(customData.customFontBold, size: 16))
+				.font(.custom(customFontBold, size: 16))
 				.padding(.top, 5)
 				.foregroundColor(Color("Color1"))
 		} //: VSTACK
