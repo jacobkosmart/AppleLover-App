@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+// Using combine to monitor earch field and if user leaves for .5 secs then statrts searching...
+// to avoid
+import Combine
+
 class HomeViewModel: ObservableObject {
 	
 	// MARK: -  PROPERTY
@@ -41,8 +45,20 @@ class HomeViewModel: ObservableObject {
 	@Published var searchActivated: Bool = false
 	@Published var searchedProducts: [Product]?
 	
+	var searchCancellable: Any?
+	
 	init() {
 		filterProductByType()
+		
+		searchCancellable = $searchText.removeDuplicates()
+			.debounce(for: 0.5, scheduler: RunLoop.main)
+			.sink(receiveValue: { str in
+				if str != ""{
+					self.filterProductBySearch()
+				} else {
+					self.searchedProducts = nil
+				}
+			})
 	}
 	
 	

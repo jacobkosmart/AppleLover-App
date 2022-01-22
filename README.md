@@ -47,7 +47,7 @@
 
 #### 👉 [5.Building Staggered Grid Search Results]()
 
-#### 👉 []()
+#### 👉 [6.Combine to search Products]()
 
 #### 👉 []()
 

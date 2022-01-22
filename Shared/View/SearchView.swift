@@ -23,8 +23,12 @@ struct SearchView: View {
 				
 				// Back Button..
 				Button  {
-					homeData.searchActivated = false
-				} label: {
+					withAnimation {
+						homeData.searchActivated = false
+					}
+					homeData.searchText = ""
+				}
+				label: {
 					Image(systemName: "arrow.left")
 						.font(.title2)
 						.foregroundColor(.black.opacity(0.7))
@@ -82,12 +86,12 @@ struct SearchView: View {
 						
 						VStack (spacing: 0) {
 							// Found Text..
-							Text("\(homeData.products.count) 개의 결과를 찾았습니다")
+							Text("\(products.count) 개의 결과를 찾았습니다")
 								.font(.custom(customFontBold, size: 24))
 								.padding(.vertical)
 							
 							// Staggered Grid
-							StaggeredGrid(columns: 2, spacing: 20, list: homeData.products) { product in
+							StaggeredGrid(columns: 2, spacing: 20, list: products) { product in
 								// Card View
 								SearchCardView(product: product)
 							}
